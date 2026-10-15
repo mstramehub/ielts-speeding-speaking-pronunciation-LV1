@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>IELTS Speaking Pronunciation</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Charis+SIL:wght@400;700&display=swap">
+<style>
+/* Layout: sticky tab rail on top, one panel visible at a time; IPA set in a phonetic serif, stress shown as dot patterns (Oo) */
+:root{
+  --bg:#f3f6f7; --surface:#ffffff; --fg:#13232b; --muted:#566a73; --line:#d6e0e4;
+  --accent:#0b6c9e; --accent-soft:#e1f2fb; --stress:#c2410c; --stress-soft:#fdeee4;
+  --ok:#15803d; --bad:#b91c1c;
+  --display:"Bricolage Grotesque","Be Vietnam Pro",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ipa:"Charis SIL","Doulos SIL","Gentium Plus","Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e171b; --surface:#16232a; --fg:#e4eef1; --muted:#9db1b9; --line:#2a3b43;
+  --accent:#4cc3f2; --accent-soft:#12364a; --stress:#fb923c; --stress-soft:#3a2416;
+  --ok:#4ade80; --bad:#f87171; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e171b; --surface:#16232a; --fg:#e4eef1; --muted:#9db1b9; --line:#2a3b43;
+  --accent:#4cc3f2; --accent-soft:#12364a; --stress:#fb923c; --stress-soft:#3a2416;
+  --ok:#4ade80; --bad:#f87171; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:920px;margin:0 auto;padding-block:28px 64px}
+.brandbar{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;padding-bottom:20px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.logo{background:#fff;border-radius:10px;padding:8px 10px;width:110px;height:auto;display:block}
+.contact{display:flex;flex-direction:column;gap:3px;font-size:.92rem;min-width:0}
+.contact .tag{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.contact .lbl{display:inline-block;min-width:104px;font-size:.78rem;font-weight:600;color:var(--muted)}
+.contact a{font-weight:600;text-decoration:none}
+.contact a:hover{text-decoration:underline}
+.contact .pipe{color:var(--line);padding:0 4px}
+header.top h1 .bar{color:var(--accent);font-weight:600;padding:0 .15em}
+.foot-contact{margin-top:10px;display:flex;flex-wrap:wrap;gap:4px 18px}
+header.top h1{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,4.6vw,2.5rem);line-height:1.1;margin:0 0 8px;text-wrap:balance;letter-spacing:-.01em}
+header.top p{margin:0;color:var(--muted);max-width:62ch}
+.band{display:inline-flex;gap:6px;align-items:center;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);margin:22px 0 26px;padding-block:10px;border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto}
+nav.tabs button{flex:0 0 auto;font:inherit;font-size:.92rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+nav.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+nav.tabs .sep{flex:0 0 1px;background:var(--line);margin:4px 4px}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--stress);outline-offset:2px}
+section.panel h2{font-family:var(--display);font-weight:800;font-size:1.7rem;line-height:1.15;margin:0 0 6px;text-wrap:balance}
+section.panel h3{font-family:var(--display);font-weight:600;font-size:1.2rem;margin:34px 0 10px;text-wrap:balance}
+.lead{color:var(--muted);max-width:65ch;margin:0 0 18px}
+p,li{max-width:68ch}
+.ipa{font-family:var(--ipa);font-size:1.05em}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.why{border-left:4px solid var(--stress);background:var(--stress-soft);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+.why b{color:var(--stress)}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.say{font:inherit;font-size:.82rem;border:1px solid var(--line);background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:2px 8px;cursor:pointer;white-space:nowrap}
+.say:hover{border-color:var(--accent)}
+.vtabs .say[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.grid2>*{min-width:0}
+.k{font-weight:700;color:var(--stress)}
+.end{color:var(--stress);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+mark.s{background:none;color:var(--stress);font-weight:700}
+.weak{color:var(--muted);font-size:.92em}
+.chunks{font-size:1.1rem;line-height:2.1}
+.chunks .sl{color:var(--accent);font-weight:700;padding:0 4px}
+/* stress dots */
+.dots{display:inline-flex;gap:4px;align-items:center;vertical-align:middle}
+.dots i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--muted);opacity:.55}
+.dots i.on{width:14px;height:14px;background:var(--stress);opacity:1}
+.syl{letter-spacing:.02em}
+.syl b{color:var(--stress)}
+/* quiz */
+.quiz{display:flex;flex-direction:column;gap:12px}
+.qword{font-family:var(--display);font-size:2rem;font-weight:800}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opts button{font:inherit;font-weight:600;min-width:72px;padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.opts button.ok{border-color:var(--ok);color:var(--ok)}
+.opts button.no{border-color:var(--bad);color:var(--bad)}
+.fb{min-height:1.6em;font-size:.95rem}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{font:inherit;font-size:.88rem;padding:6px 12px;border:0;background:var(--surface);color:var(--fg);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+.btn{font:inherit;font-weight:600;padding:9px 16px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+ol.steps{padding-left:1.2em;margin:0}
+ol.steps li{margin-bottom:6px}
+.check label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
+.check label:last-child{border-bottom:0}
+.check input{margin-top:5px;accent-color:var(--accent);width:18px;height:18px;flex:0 0 auto}
+.cue{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--surface)}
+.cue h4{margin:0 0 6px;font-size:1rem}
+.cue ul{margin:0;padding-left:1.1em;color:var(--muted)}
+.qlist li{margin-bottom:4px}
+.passage{font-size:1.12rem;line-height:2}
+.passage span.c{border-radius:4px;padding:1px 2px;transition:background .15s}
+.passage span.c.now{background:var(--accent-soft);outline:1px solid var(--accent)}
+.passage .sl{color:var(--accent);font-weight:700;padding:0 3px}
+.qa-list{display:flex;flex-direction:column;gap:14px}
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.qa .part{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:2px 8px;margin-bottom:6px}
+.qa .q{font-weight:600;margin:0 0 8px;font-size:1.02rem}
+.qa .ans{font-size:1.08rem;line-height:2;margin:0 0 10px}
+.qa .ans span.c{border-radius:4px;padding:1px 2px;transition:background .15s}
+.qa .ans span.c.now{background:var(--accent-soft);outline:1px solid var(--accent)}
+.qa .ans .sl,.qa .ans .fall{color:var(--accent);font-weight:700;padding:0 3px}
+.qa .vocab-used{font-size:.85rem;color:var(--muted);margin:0 0 10px}
+.ipa-block{border-top:1px dashed var(--line);padding-top:8px;margin:0 0 10px;display:flex;gap:10px;align-items:baseline}
+.ipa-lbl{flex:0 0 auto;font-size:.7rem;font-weight:700;letter-spacing:.08em;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+.ipa-line{margin:0;font-size:1.05rem;line-height:1.95;min-width:0;color:var(--fg)}
+.ipa-line span.c{border-radius:4px;padding:1px 2px}
+.ipa-line span.c.now{background:var(--accent-soft);outline:1px solid var(--accent)}
+.ipa-line .sl,.ipa-line .fall{color:var(--accent);font-weight:700;padding:0 3px;font-family:var(--body)}
+.hide-ipa .ipa-block{display:none}
+.vtabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.note{font-size:.88rem;color:var(--muted)}
+.tts-off .say,.tts-off .needs-tts{display:none}
+.tts-msg{display:none}
+.tts-off .tts-msg{display:block}
+input[type=range]{accent-color:var(--accent)}
+audio{width:100%;margin-top:10px}
+a{color:var(--accent)}
+footer{margin-top:48px;color:var(--muted);font-size:.85rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap" id="app">
+<div class="brandbar">
+  <img class="logo" src="data:image/jpeg;base64,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" alt="Ms Trâm English Hub" width="110" height="125">
+  <div class="contact">
+    <div class="tag">Tiếng Anh cho mọi lứa tuổi</div>
+    <div><span class="lbl">Zalo / Hotline</span> <a href="tel:0792951529">079 29 51 529</a> <span class="pipe">|</span> <a href="tel:0898123696">0898 123 696</a></div>
+    <div><span class="lbl">Địa chỉ</span> 12 Lê Đình Chinh, Quy Nhơn Nam</div>
+    <div><span class="lbl">Facebook</span> <a href="https://www.facebook.com/msTram.EClass/" target="_blank" rel="noopener">Ms Trâm</a></div>
+  </div>
+</div>
+<header class="top">
+  <h1>IELTS SPEAKING <span class="bar">|</span> PRONUNCIATION <span class="bar">|</span> 5.5–6.0</h1>
+  <p>Ba phần lý thuyết cốt lõi về phát âm, kèm ba hình thức luyện tập: ghi âm–nghe lại, shadowing và học từ vựng theo chủ đề.</p>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Các phần">
+  <button role="tab" data-tab="p1" aria-selected="true">1 · Âm cuối & âm dễ nhầm</button>
+  <button role="tab" data-tab="p2" aria-selected="false">2 · Trọng âm từ</button>
+  <button role="tab" data-tab="p3" aria-selected="false">3 · Trọng âm câu & nhịp</button>
+  <span class="sep" aria-hidden="true"></span>
+  <button role="tab" data-tab="t1" aria-selected="false">Ghi âm–nghe lại</button>
+  <button role="tab" data-tab="t2" aria-selected="false">Shadowing</button>
+  <button role="tab" data-tab="t3" aria-selected="false">Từ vựng theo chủ đề</button>
+</nav>
+
+<p class="tts-msg note box">Trình duyệt này không hỗ trợ đọc mẫu nên các nút ▶ đã được ẩn. Hãy mở trang bằng Chrome, Edge hoặc Safari để nghe phát âm mẫu.</p>
+
+<!-- ============ PHẦN 1 ============ -->
+<section class="panel" id="p1">
+  <h2>Phần 1. Âm cuối, đuôi -s/-ed và các âm dễ nhầm</h2>
+  <p class="lead">Đây là nhóm lỗi kéo điểm Pronunciation nhiều nhất với người Việt. Tiếng Việt không bật hơi âm cuối và không có cụm phụ âm, nên học sinh thường nuốt âm hoặc chèn thêm nguyên âm.</p>
+
+  <div class="why"><b>Vì sao quan trọng:</b> thiếu âm cuối có thể làm đổi nghĩa (<i>rice</i> → <i>rye</i>), còn thiếu đuôi -s/-ed khiến giám khảo nghĩ học sinh sai ngữ pháp, ảnh hưởng cả tiêu chí Grammar.</div>
+
+  <h3>1.1 Âm cuối (ending sounds)</h3>
+  <p>Nguyên tắc: <b>âm cuối phải nghe thấy được</b>, nhẹ nhưng rõ. Với phụ âm tắc /p t k/, đóng khẩu hình rồi bật hơi nhẹ; với /s z ʃ/ giữ hơi lâu hơn tiếng Việt.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Âm cuối</th><th>Ví dụ</th><th>Lỗi hay gặp</th><th></th></tr></thead>
+    <tbody>
+      <tr><td class="ipa">/t/ – /d/</td><td>wor<span class="end">k</span>e<span class="end">d</span>, ha<span class="end">t</span> – ha<span class="end">d</span></td><td>Bỏ hẳn, nghe thành “ha”</td><td><button class="say" data-say="hat. had.">▶ Nghe</button></td></tr>
+      <tr><td class="ipa">/k/ – /ɡ/</td><td>bac<span class="end">k</span> – ba<span class="end">g</span></td><td>Không phân biệt vô thanh/hữu thanh</td><td><button class="say" data-say="back. bag.">▶ Nghe</button></td></tr>
+      <tr><td class="ipa">/s/ – /z/</td><td>ri<span class="end">ce</span> – ri<span class="end">se</span>, plac<span class="end">e</span> – play<span class="end">s</span></td><td>Đọc thành “rai”, bỏ /s/</td><td><button class="say" data-say="rice. rise.">▶ Nghe</button></td></tr>
+      <tr><td class="ipa">/v/</td><td>li<span class="end">ve</span>, lo<span class="end">ve</span></td><td>Đọc thành /p/ hoặc bỏ</td><td><button class="say" data-say="live. love.">▶ Nghe</button></td></tr>
+      <tr><td class="ipa">/l/</td><td>schoo<span class="end">l</span>, fee<span class="end">l</span></td><td>Bỏ /l/ hoặc đọc thành /u/</td><td><button class="say" data-say="school. feel.">▶ Nghe</button></td></tr>
+      <tr><td class="ipa">/ʃ/ – /tʃ/ – /dʒ/</td><td>fi<span class="end">sh</span>, wat<span class="end">ch</span>, a<span class="end">ge</span></td><td>Đọc thành /s/ hoặc /t/</td><td><button class="say" data-say="fish. watch. age.">▶ Nghe</button></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>1.2 Quy tắc đuôi -s/-es và -ed</h3>
+  <div class="grid2">
+    <div class="box">
+      <h4 style="margin:0 0 8px">Đuôi -s / -es</h4>
+      <ul style="margin:0;padding-left:1.1em">
+        <li><span class="ipa k">/ɪz/</span> sau /s z ʃ tʃ ʒ dʒ/: <i>buses, watches, changes</i></li>
+        <li><span class="ipa k">/s/</span> sau âm vô thanh /p t k f θ/: <i>books, cats, laughs</i></li>
+        <li><span class="ipa k">/z/</span> sau các âm còn lại (hữu thanh, nguyên âm): <i>dogs, plays, friends</i></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4 style="margin:0 0 8px">Đuôi -ed</h4>
+      <ul style="margin:0;padding-left:1.1em">
+        <li><span class="ipa k">/ɪd/</span> sau /t/ hoặc /d/: <i>wanted, needed, decided</i></li>
+        <li><span class="ipa k">/t/</span> sau âm vô thanh /p k f s ʃ tʃ/: <i>worked, watched, laughed</i></li>
+        <li><span class="ipa k">/d/</span> sau các âm còn lại: <i>played, cleaned, changed</i></li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">Mẹo cho học sinh: đặt tay lên cổ họng. Nếu âm trước đó làm cổ rung (hữu thanh) thì đuôi đọc là /z/ hoặc /d/.</p>
+
+  <div class="box quiz" id="quiz">
+    <div class="row" style="justify-content:space-between">
+      <strong>Luyện nhanh: chọn cách đọc đuôi</strong>
+      <div class="seg" role="group" aria-label="Loại đuôi">
+        <button data-mode="ed" aria-pressed="true">-ed</button>
+        <button data-mode="s" aria-pressed="false">-s/-es</button>
+      </div>
+    </div>
+    <div class="row"><span class="qword" id="qword">worked</span><button class="say needs-tts" id="qsay">▶ Nghe</button></div>
+    <div class="opts" id="qopts"></div>
+    <div class="fb" id="qfb" aria-live="polite"></div>
+    <div class="row"><button class="btn ghost" id="qnext">Từ tiếp theo</button><span class="note" id="qscore">Đúng 0/0</span></div>
+  </div>
+
+  <h3>1.3 Cụm phụ âm (consonant clusters)</h3>
+  <p>Học sinh hay chèn nguyên âm (<i>street</i> → “sơ-tơ-rít”) hoặc rút gọn (<i>months</i> → “mon”). Luyện bằng cách đọc chậm từng phụ âm rồi ghép dần.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Vị trí</th><th>Ví dụ</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>Đầu từ</td><td><b>str</b>eet, <b>spl</b>it, <b>pr</b>oblem, <b>cl</b>ass</td><td><button class="say" data-say="street. split. problem. class.">▶ Nghe</button></td></tr>
+      <tr><td>Cuối từ</td><td>mon<b>ths</b>, te<b>xts</b>, a<b>sked</b>, fi<b>fth</b></td><td><button class="say" data-say="months. texts. asked. fifth.">▶ Nghe</button></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>1.4 Các cặp âm dễ nhầm (minimal pairs)</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Cặp âm</th><th>Cặp từ</th><th>Cách phân biệt</th><th></th></tr></thead>
+    <tbody>
+      <tr><td class="ipa">/θ/ – /s/</td><td>think – sink</td><td>/θ/ đặt đầu lưỡi giữa hai hàm răng, thổi hơi</td><td><button class="say" data-say="think. sink.">▶</button></td></tr>
+      <tr><td class="ipa">/ð/ – /d/</td><td>they – day</td><td>/ð/ giống /θ/ nhưng cổ họng rung</td><td><button class="say" data-say="they. day.">▶</button></td></tr>
+      <tr><td class="ipa">/ʃ/ – /s/</td><td>she – see</td><td>/ʃ/ tròn môi, lưỡi lùi vào trong</td><td><button class="say" data-say="she. see.">▶</button></td></tr>
+      <tr><td class="ipa">/iː/ – /ɪ/</td><td>sheep – ship</td><td>/iː/ dài, căng môi; /ɪ/ ngắn, thả lỏng</td><td><button class="say" data-say="sheep. ship.">▶</button></td></tr>
+      <tr><td class="ipa">/æ/ – /e/</td><td>bad – bed</td><td>/æ/ mở miệng rộng, hàm dưới hạ thấp</td><td><button class="say" data-say="bad. bed.">▶</button></td></tr>
+      <tr><td class="ipa">/uː/ – /ʊ/</td><td>pool – pull</td><td>/uː/ dài, tròn môi; /ʊ/ ngắn</td><td><button class="say" data-say="pool. pull.">▶</button></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============ PHẦN 2 ============ -->
+<section class="panel" id="p2" hidden>
+  <h2>Phần 2. Trọng âm từ (word stress)</h2>
+  <p class="lead">Đọc sai trọng âm làm từ vựng band cao trở nên khó nghe. Giám khảo có thể không nhận ra <i>economic</i> nếu học sinh nhấn sai âm tiết.</p>
+
+  <div class="why"><b>Cách thể hiện âm tiết nhấn:</b> to hơn, dài hơn, cao giọng hơn. Các âm tiết không nhấn thường rút về âm yếu <span class="ipa">/ə/</span>. Trên trang này, chấm lớn màu cam là âm tiết nhấn: <span class="dots" aria-label="Oo"><i class="on"></i><i></i></span> = O o.</div>
+
+  <h3>2.1 Quy tắc theo loại từ (từ 2 âm tiết)</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Quy tắc</th><th>Ví dụ</th><th>Mẫu</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>Phần lớn danh từ, tính từ: nhấn âm 1</td><td class="syl"><b>TA</b>ble, <b>HAP</b>py, <b>STU</b>dent</td><td><span class="dots"><i class="on"></i><i></i></span></td><td><button class="say" data-say="table. happy. student.">▶</button></td></tr>
+      <tr><td>Phần lớn động từ: nhấn âm 2</td><td class="syl">de<b>CIDE</b>, im<b>PROVE</b>, be<b>COME</b></td><td><span class="dots"><i></i><i class="on"></i></span></td><td><button class="say" data-say="decide. improve. become.">▶</button></td></tr>
+      <tr><td>Cùng chữ, đổi loại từ thì đổi trọng âm</td><td class="syl"><b>RE</b>cord (n) – re<b>CORD</b> (v)<br><b>PRE</b>sent (n) – pre<b>SENT</b> (v)<br><b>IN</b>crease (n) – in<b>CREASE</b> (v)</td><td><span class="dots"><i class="on"></i><i></i></span> / <span class="dots"><i></i><i class="on"></i></span></td><td><button class="say" data-say="a record. to record. a present. to present.">▶</button></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>2.2 Quy tắc theo hậu tố (rất hữu ích với từ học thuật)</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Hậu tố</th><th>Trọng âm rơi vào</th><th>Ví dụ</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>-tion, -sion, -ic, -ical, -ity, -ian</td><td>Âm tiết <b>ngay trước</b> hậu tố</td><td class="syl">edu<b>CA</b>tion, eco<b>NOM</b>ic, uni<b>VER</b>sity, mu<b>SI</b>cian</td><td><button class="say" data-say="education. economic. university. musician.">▶</button></td></tr>
+      <tr><td>-y, -al, -ate, -graphy, -logy (từ ≥3 âm tiết)</td><td>Âm tiết <b>thứ 3 từ cuối lên</b></td><td class="syl">e<b>CON</b>omy, tech<b>NOL</b>ogy, pho<b>TOG</b>raphy</td><td><button class="say" data-say="economy. technology. photography.">▶</button></td></tr>
+      <tr><td>-ee, -eer, -ese, -ique, -oon</td><td>Nhấn <b>chính hậu tố</b></td><td class="syl">employ<b>EE</b>, volun<b>TEER</b>, Vietna<b>MESE</b>, u<b>NIQUE</b></td><td><button class="say" data-say="employee. volunteer. Vietnamese. unique.">▶</button></td></tr>
+      <tr><td>-ment, -ness, -ful, -less, -er, -ly</td><td><b>Không đổi</b> trọng âm của từ gốc</td><td class="syl">de<b>VEL</b>op → de<b>VEL</b>opment, <b>CARE</b> → <b>CARE</b>ful</td><td><button class="say" data-say="develop. development. careful.">▶</button></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>2.3 Họ từ đổi trọng âm: hay gặp trong Speaking</h3>
+  <p>Đây là nhóm học sinh hay đọc sai nhất vì quen trọng âm của từ gốc.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Từ gốc</th><th>Từ phái sinh</th><th></th></tr></thead>
+    <tbody>
+      <tr><td class="syl"><b>PHO</b>tograph <span class="dots"><i class="on"></i><i></i><i></i></span></td><td class="syl">pho<b>TOG</b>rapher <span class="dots"><i></i><i class="on"></i><i></i><i></i></span> · photo<b>GRAPH</b>ic <span class="dots"><i></i><i></i><i class="on"></i><i></i></span></td><td><button class="say" data-say="photograph. photographer. photographic.">▶</button></td></tr>
+      <tr><td class="syl">e<b>CON</b>omy <span class="dots"><i></i><i class="on"></i><i></i><i></i></span></td><td class="syl">eco<b>NOM</b>ic <span class="dots"><i></i><i></i><i class="on"></i><i></i></span> · eco<b>NOM</b>ical</td><td><button class="say" data-say="economy. economic. economical.">▶</button></td></tr>
+      <tr><td class="syl"><b>PO</b>litics <span class="dots"><i class="on"></i><i></i><i></i></span></td><td class="syl">po<b>LIT</b>ical <span class="dots"><i></i><i class="on"></i><i></i><i></i></span> · poli<b>TI</b>cian <span class="dots"><i></i><i></i><i class="on"></i><i></i></span></td><td><button class="say" data-say="politics. political. politician.">▶</button></td></tr>
+      <tr><td class="syl"><b>A</b>nalyse <span class="dots"><i class="on"></i><i></i><i></i></span></td><td class="syl">a<b>NAL</b>ysis <span class="dots"><i></i><i class="on"></i><i></i><i></i></span> · ana<b>LYT</b>ical <span class="dots"><i></i><i></i><i class="on"></i><i></i><i></i></span></td><td><button class="say" data-say="analyse. analysis. analytical.">▶</button></td></tr>
+      <tr><td class="syl"><b>PER</b>sonal <span class="dots"><i class="on"></i><i></i><i></i></span></td><td class="syl">perso<b>NAL</b>ity <span class="dots"><i></i><i></i><i class="on"></i><i></i><i></i></span></td><td><button class="say" data-say="personal. personality.">▶</button></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Khi học từ mới, luôn ghi kèm phiên âm và đánh dấu trọng âm. Xem thêm ở mục <a href="#t3" data-goto="t3">Từ vựng theo chủ đề</a>.</p>
+</section>
+
+<!-- ============ PHẦN 3 ============ -->
+<section class="panel" id="p3" hidden>
+  <h2>Phần 3. Trọng âm câu và nhịp điệu</h2>
+  <p class="lead">Tiếng Việt đọc đều từng tiếng; tiếng Anh nhấn từ quan trọng và lướt nhanh từ phụ. Học sinh band 5.5 thường nói “đều đều”, nghe như đọc từng chữ.</p>
+
+  <h3>3.1 Từ nội dung và từ chức năng</h3>
+  <div class="grid2">
+    <div class="box">
+      <h4 style="margin:0 0 6px;color:var(--stress)">Nhấn (content words)</h4>
+      <p style="margin:0">Danh từ, động từ chính, tính từ, trạng từ, từ để hỏi (<i>what, why</i>), từ phủ định (<i>not, never, can't</i>), số từ.</p>
+    </div>
+    <div class="box">
+      <h4 style="margin:0 0 6px;color:var(--muted)">Lướt (function words)</h4>
+      <p style="margin:0">Mạo từ (<i>a, the</i>), giới từ (<i>to, of, for</i>), đại từ (<i>I, it, them</i>), trợ động từ (<i>can, do, have, is</i>), liên từ (<i>and, but</i>).</p>
+    </div>
+  </div>
+  <div class="box" style="margin-top:14px">
+    <p class="chunks" style="margin:0">I <mark class="s">usually</mark> <mark class="s">go</mark> to the <mark class="s">gym</mark> <mark class="s">three</mark> <mark class="s">times</mark> a <mark class="s">week</mark>.</p>
+    <p class="chunks" style="margin:0">It's a <mark class="s">great</mark> <mark class="s">way</mark> to <mark class="s">relax</mark> after <mark class="s">work</mark>.</p>
+    <div class="row" style="margin-top:8px"><button class="say" data-say="I usually go to the gym three times a week. It's a great way to relax after work.">▶ Nghe câu mẫu</button><span class="note">Chữ cam: nhấn. Chữ thường: đọc nhanh, nhẹ.</span></div>
+  </div>
+
+  <h3>3.2 Âm yếu /ə/ và dạng yếu (weak forms)</h3>
+  <p>Từ chức năng khi không nhấn gần như luôn rút về <span class="ipa">/ə/</span>. Học sinh đọc đầy đủ “tu”, “pho”, “ken” làm câu bị nặng và chậm.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Từ</th><th>Dạng mạnh</th><th>Dạng yếu</th><th>Ví dụ</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>to</td><td class="ipa">/tuː/</td><td class="ipa k">/tə/</td><td>I want <span class="weak">to</span> travel.</td><td><button class="say" data-say="I want to travel.">▶</button></td></tr>
+      <tr><td>for</td><td class="ipa">/fɔː/</td><td class="ipa k">/fə/</td><td>It's good <span class="weak">for</span> health.</td><td><button class="say" data-say="It's good for your health.">▶</button></td></tr>
+      <tr><td>can</td><td class="ipa">/kæn/</td><td class="ipa k">/kən/</td><td>I <span class="weak">can</span> cook.</td><td><button class="say" data-say="I can cook.">▶</button></td></tr>
+      <tr><td>of</td><td class="ipa">/ɒv/</td><td class="ipa k">/əv/</td><td>a lot <span class="weak">of</span> people</td><td><button class="say" data-say="a lot of people">▶</button></td></tr>
+      <tr><td>and</td><td class="ipa">/ænd/</td><td class="ipa k">/ən/</td><td>fish <span class="weak">and</span> chips</td><td><button class="say" data-say="fish and chips">▶</button></td></tr>
+      <tr><td>was</td><td class="ipa">/wɒz/</td><td class="ipa k">/wəz/</td><td>It <span class="weak">was</span> fun.</td><td><button class="say" data-say="It was fun.">▶</button></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Lưu ý: <i>can</i> ở cuối câu hoặc khi nhấn mạnh vẫn đọc dạng mạnh: “Yes, I <b>can</b>.” Còn <i>can't</i> luôn được nhấn, giúp người nghe phân biệt với <i>can</i>.</p>
+
+  <h3>3.3 Chia cụm ý (chunking)</h3>
+  <p>Ngắt hơi theo cụm nghĩa, không ngắt giữa cụm. Mỗi cụm thường có một từ nhấn mạnh nhất.</p>
+  <div class="grid2">
+    <div class="box">
+      <p class="note" style="margin:0 0 6px;color:var(--bad)">Ngắt sai</p>
+      <p class="chunks" style="margin:0">In my / opinion the main / reason is that / young people don't have / enough time.</p>
+    </div>
+    <div class="box">
+      <p class="note" style="margin:0 0 6px;color:var(--ok)">Ngắt đúng</p>
+      <p class="chunks" style="margin:0">In my <mark class="s">opinion</mark><span class="sl">/</span> the main <mark class="s">reason</mark><span class="sl">/</span> is that young <mark class="s">people</mark><span class="sl">/</span> don't have enough <mark class="s">time</mark>.</p>
+    </div>
+  </div>
+
+  <h3>3.4 Nối âm cơ bản (linking)</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Kiểu nối</th><th>Ví dụ</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>Phụ âm + nguyên âm</td><td>turn‿off · pick‿it‿up · an‿apple</td><td><button class="say" data-say="turn off. pick it up. an apple.">▶</button></td></tr>
+      <tr><td>Hai phụ âm giống nhau</td><td>bus‿stop · good‿day (chỉ đọc một lần, giữ lâu hơn)</td><td><button class="say" data-say="bus stop. good day.">▶</button></td></tr>
+      <tr><td>Nguyên âm + nguyên âm (thêm /j/ hoặc /w/)</td><td>I‿<sup>j</sup>agree · go‿<sup>w</sup>out</td><td><button class="say" data-say="I agree. go out.">▶</button></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>3.5 Ngữ điệu (intonation): để hướng tới 6.5–7</h3>
+  <ul>
+    <li><b>Xuống giọng ↘</b> khi kết thúc ý, câu trần thuật, câu hỏi Wh-: <i>Where do you live↘?</i></li>
+    <li><b>Lên giọng ↗</b> ở câu hỏi Yes/No và khi liệt kê chưa xong: <i>I like reading↗, cooking↗ and swimming↘.</i></li>
+    <li><b>Nhấn đối lập</b> để thể hiện quan điểm: <i>It's not <b>cheap</b>, but it's <b>worth</b> it.</i></li>
+  </ul>
+  <button class="say" data-say="I like reading, cooking, and swimming. It's not cheap, but it's worth it.">▶ Nghe ví dụ</button>
+</section>
+
+<!-- ============ LUYỆN TẬP 1 ============ -->
+<section class="panel" id="t1" hidden>
+  <h2>Luyện tập 1. Ghi âm–nghe lại</h2>
+  <p class="lead">Học sinh trả lời một câu hỏi Speaking, ghi âm bằng điện thoại, sau đó tự nghe lại và tìm lỗi theo checklist. Mỗi lần nghe chỉ tập trung một loại lỗi.</p>
+
+  <h3>Quy trình 5 bước</h3>
+  <ol class="steps box">
+    <li>Chọn một câu hỏi Part 1 (trả lời 20–30 giây) hoặc một cue card Part 2 (1 phút chuẩn bị, nói 1–2 phút).</li>
+    <li>Ghi âm bằng ứng dụng ghi âm của điện thoại. Nói tự nhiên, không đọc giấy.</li>
+    <li>Tải file lên ô bên dưới và nghe lại <b>lần 1</b>: chỉ bắt lỗi âm cuối và đuôi -s/-ed.</li>
+    <li>Nghe <b>lần 2</b>: chỉ bắt lỗi trọng âm từ của các từ dài (từ 3 âm tiết trở lên). Ghi ra giấy, tra lại phiên âm.</li>
+    <li>Ghi âm lại câu trả lời đó và so sánh hai bản. Lưu cả hai để theo dõi tiến bộ.</li>
+  </ol>
+
+  <h3>Nghe lại bài ghi âm</h3>
+  <div class="box">
+    <label for="audioIn" style="font-weight:600">Chọn file ghi âm (m4a, mp3, wav…)</label><br>
+    <input type="file" id="audioIn" accept="audio/*" style="margin-top:8px;max-width:100%">
+    <audio id="player" controls hidden></audio>
+    <div class="row" id="rateRow" style="margin-top:8px" hidden>
+      <span class="note">Tốc độ nghe:</span>
+      <div class="seg" role="group" aria-label="Tốc độ">
+        <button data-rate="0.75" aria-pressed="false">0.75×</button>
+        <button data-rate="1" aria-pressed="true">1×</button>
+      </div>
+      <button class="btn ghost" id="back5" type="button">⟲ Lùi 5 giây</button>
+    </div>
+    <p class="note" style="margin:8px 0 0">File chỉ phát trên máy của bạn, không được tải lên đâu cả. Nghe ở tốc độ 0.75× giúp dễ phát hiện âm cuối bị nuốt.</p>
+  </div>
+
+  <h3>Checklist tự đánh giá</h3>
+  <div class="grid2">
+    <div class="box check">
+      <strong>Lần nghe 1: Âm</strong>
+      <label><input type="checkbox" id="c1"> Âm cuối /t d k s z/ nghe rõ ở hầu hết các từ</label>
+      <label><input type="checkbox" id="c2"> Đuôi -s ở danh từ số nhiều và động từ ngôi 3 không bị bỏ</label>
+      <label><input type="checkbox" id="c3"> Đuôi -ed đọc đúng /t/ /d/ /ɪd/, không đọc “ét” cho mọi từ</label>
+      <label><input type="checkbox" id="c4"> Không chèn nguyên âm vào cụm phụ âm (street, months)</label>
+      <label><input type="checkbox" id="c5"> Phân biệt được /θ ð/ với /s d/ ở <i>think, the, this</i></label>
+    </div>
+    <div class="box check">
+      <strong>Lần nghe 2: Trọng âm & nhịp</strong>
+      <label><input type="checkbox" id="c6"> Từ dài (3+ âm tiết) nhấn đúng âm tiết</label>
+      <label><input type="checkbox" id="c7"> Nhấn từ quan trọng, lướt <i>to, of, and, the</i></label>
+      <label><input type="checkbox" id="c8"> Ngắt nghỉ theo cụm ý, không ngắt giữa cụm</label>
+      <label><input type="checkbox" id="c9"> Có xuống giọng khi kết thúc ý</label>
+      <label><input type="checkbox" id="c10"> Người không quen giọng mình vẫn nghe hiểu được</label>
+    </div>
+  </div>
+  <p class="note" id="ckScore">Đã đạt 0/10 tiêu chí.</p>
+
+  <h3>Ngân hàng câu hỏi</h3>
+  <div class="grid2">
+    <div class="box">
+      <strong>Part 1</strong>
+      <ul class="qlist" style="padding-left:1.1em;margin:8px 0 0">
+        <li>Do you work or are you a student?</li>
+        <li>What do you like most about your hometown?</li>
+        <li>How do you usually spend your weekends?</li>
+        <li>Do you prefer reading books or watching films? Why?</li>
+        <li>How often do you use social media?</li>
+        <li>What kind of food did you like when you were a child?</li>
+      </ul>
+      <p class="note" style="margin:8px 0 0">Câu cuối dùng thì quá khứ: rất tốt để kiểm tra đuôi -ed.</p>
+    </div>
+    <div class="cue">
+      <h4>Part 2 · Describe a teacher who influenced you.</h4>
+      <p class="note" style="margin:0 0 6px">You should say:</p>
+      <ul>
+        <li>who this teacher was</li>
+        <li>what subject he or she taught</li>
+        <li>what this teacher was like</li>
+        <li>and explain why he or she influenced you.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LUYỆN TẬP 2 ============ -->
+<section class="panel" id="t2" hidden>
+  <h2>Luyện tập 2. Shadowing</h2>
+  <p class="lead">Nghe và nói đuổi theo ngay sau người đọc, chậm khoảng nửa giây. Mục tiêu không phải nói đúng từng chữ mà là <b>bắt chước nhịp, chỗ nhấn và chỗ ngắt</b>.</p>
+
+  <h3>Cách luyện một đoạn 30–60 giây</h3>
+  <ol class="steps box">
+    <li><b>Nghe 2 lần</b>, không nhìn chữ, để nắm ý chính.</li>
+    <li><b>Nghe và nhìn chữ</b>: gạch dấu <span style="color:var(--accent);font-weight:700">/</span> ở chỗ người đọc ngắt, gạch chân từ được nhấn.</li>
+    <li><b>Đọc theo từng cụm</b>: nghe một cụm, dừng, nhại lại cụm đó.</li>
+    <li><b>Shadowing có chữ</b>: nói đuổi theo cả đoạn, nhìn văn bản.</li>
+    <li><b>Shadowing không chữ</b>: nói đuổi theo chỉ bằng tai.</li>
+    <li><b>Ghi âm bản của mình</b> và so với bản gốc (dùng phần Ghi âm–nghe lại).</li>
+  </ol>
+
+  <h3>Đoạn luyện mẫu</h3>
+  <p class="note">Ba đoạn ngắn theo phong cách câu trả lời Speaking. Dấu <span style="color:var(--accent);font-weight:700">/</span> là chỗ ngắt, chữ cam là từ nhấn. Bấm “Đọc theo cụm” để máy đọc từng cụm, mỗi cụm có khoảng dừng để học sinh nhại lại.</p>
+  <div class="vtabs" id="passTabs" role="group" aria-label="Chọn đoạn"></div>
+  <div class="box">
+    <p class="passage" id="passage"></p>
+    <div class="row needs-tts">
+      <button class="btn" id="playAll" type="button">▶ Đọc liền cả đoạn</button>
+      <button class="btn ghost" id="playChunks" type="button">Đọc theo cụm (có khoảng dừng)</button>
+      <button class="btn ghost" id="stopTts" type="button">■ Dừng</button>
+    </div>
+    <div class="row needs-tts" style="margin-top:10px">
+      <label for="rate" class="note">Tốc độ đọc</label>
+      <input type="range" id="rate" min="0.6" max="1.1" step="0.05" value="0.85">
+      <span class="note" id="rateVal">0.85×</span>
+    </div>
+    <p class="note" style="margin:10px 0 0">Giọng đọc là giọng máy của trình duyệt, chỉ dùng để luyện cụm và nhịp. Với ngữ điệu tự nhiên, dùng nguồn audio thật bên dưới.</p>
+  </div>
+
+  <h3>Nguồn audio thật gợi ý</h3>
+  <div class="grid2">
+    <div class="box">
+      <strong><a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" target="_blank" rel="noopener">BBC Learning English · 6 Minute English</a></strong>
+      <p style="margin:6px 0 0">Hai người dẫn trò chuyện về một chủ đề, có transcript. Chọn một đoạn 30–60 giây, chủ đề gần với IELTS như môi trường, công nghệ, sức khỏe.</p>
+    </div>
+    <div class="box">
+      <strong><a href="https://www.bbc.co.uk/learningenglish/english/features/the-english-we-speak" target="_blank" rel="noopener">BBC Learning English · The English We Speak</a></strong>
+      <p style="margin:6px 0 0">Đoạn ngắn khoảng 3 phút, hội thoại tự nhiên, phù hợp luyện nối âm và ngữ điệu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LUYỆN TẬP 3 ============ -->
+<section class="panel" id="t3" hidden>
+  <h2>Luyện tập 3. Từ vựng theo chủ đề</h2>
+  <p class="lead">Khi dạy từ mới cho một topic Speaking, dạy luôn phiên âm và trọng âm. Học sinh ghi vào sổ theo đúng định dạng bên dưới: <b>từ · phiên âm · mẫu trọng âm · câu ví dụ</b>. Sau đó luyện câu trả lời mẫu có dùng các từ này.</p>
+
+  <div class="vtabs" id="topicTabs" role="group" aria-label="Chủ đề"></div>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Từ</th><th>Phiên âm (Anh-Anh)</th><th>Trọng âm</th><th>Ví dụ dùng trong Speaking</th><th></th></tr></thead>
+    <tbody id="vocabBody"></tbody>
+  </table></div>
+
+  <h3>Câu hỏi và câu trả lời mẫu</h3>
+  <p class="note" style="margin-top:0">Câu trả lời mẫu dùng từ vựng của chủ đề đang chọn. <mark class="s">Chữ cam</mark> là từ được nhấn trong câu, các từ còn lại đọc nhanh và nhẹ. Dấu <span style="color:var(--accent);font-weight:700">/</span> là chỗ ngắt hơi giữa các cụm ý, <span style="color:var(--accent);font-weight:700">↘</span> là chỗ xuống giọng khi kết thúc ý.</p>
+  <div class="box" style="margin-bottom:14px">
+    <div class="row" style="justify-content:space-between"><strong>Ký hiệu trong dòng IPA</strong><label class="note" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="ipaToggle" checked style="accent-color:var(--accent)"> Hiện IPA</label></div>
+    <ul style="margin:6px 0 0;padding-left:1.1em" class="note">
+      <li><span class="ipa">ˈ</span> đặt trước âm tiết được nhấn. Chỉ đánh dấu ở các từ được nhấn trong câu, từ không nhấn để trống.</li>
+      <li><span class="ipa">‿</span> nối âm giữa hai từ, ví dụ <span class="ipa">ˈlɒts‿əv</span> (<i>lots of</i>).</li>
+      <li><span class="ipa">ə</span> là âm yếu của từ chức năng: <span class="ipa">tə, əv, ən, kən</span>.</li>
+      <li><span class="ipa">l̩ n̩</span> là phụ âm đứng thành âm tiết riêng, không có nguyên âm: <span class="ipa">ˈpiːpl̩, pəˈluːʃn̩</span>.</li>
+    </ul>
+  </div>
+  <div class="qa-list" id="qaList"></div>
+  <div class="box" style="margin-top:14px">
+    <strong>Cách luyện với câu trả lời mẫu</strong>
+    <ol class="steps" style="margin-top:6px">
+      <li>Đọc thầm câu trả lời, chú ý từ nhấn và chỗ ngắt.</li>
+      <li>Bấm “Đọc theo cụm”, nhại lại từng cụm trong khoảng dừng.</li>
+      <li>Tự đọc cả câu trả lời, ghi âm và so với bản đọc mẫu.</li>
+      <li>Che câu trả lời, tự trả lời lại câu hỏi bằng ý của mình nhưng giữ cách nhấn và ngắt tương tự.</li>
+    </ol>
+  </div>
+</section>
+
+<footer><strong>Ms Trâm English Hub</strong> · 12 Lê Đình Chinh, Quy Nhơn Nam<div class="foot-contact"><span>Zalo/Hotline: 079 29 51 529 · 0898 123 696</span><a href="https://www.facebook.com/msTram.EClass/" target="_blank" rel="noopener">Facebook Ms Trâm</a></div><p style="margin:10px 0 0">Phiên âm theo giọng Anh-Anh chuẩn (RP). Giọng đọc mẫu dùng bộ đọc của trình duyệt nên có thể khác nhau giữa các máy.</p></footer>
+</div>
+
+<script>
+(function(){
+  /* ---------- tabs ---------- */
+  const tabs=[...document.querySelectorAll('nav.tabs [data-tab]')];
+  const panels=[...document.querySelectorAll('section.panel')];
+  function show(id){
+    if(!panels.some(p=>p.id===id)) id='p1';
+    tabs.forEach(t=>t.setAttribute('aria-selected',t.dataset.tab===id?'true':'false'));
+    panels.forEach(p=>p.hidden=p.id!==id);
+    try{localStorage.setItem('pa-tab',id)}catch(e){}
+  }
+  tabs.forEach(t=>t.addEventListener('click',()=>{show(t.dataset.tab);window.scrollTo({top:0})}));
+  document.querySelectorAll('[data-goto]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();show(a.dataset.goto);window.scrollTo({top:0})}));
+  let start=(location.hash||'').slice(1);
+  if(!start){try{start=localStorage.getItem('pa-tab')||''}catch(e){}}
+  show(start||'p1');
+
+  /* ---------- TTS ---------- */
+  const synth=window.speechSynthesis;
+  const hasTTS=!!(synth&&window.SpeechSynthesisUtterance);
+  if(!hasTTS) document.getElementById('app').classList.add('tts-off');
+  let voice=null;
+  function pickVoice(){
+    if(!hasTTS)return;
+    const vs=synth.getVoices();
+    voice=vs.find(v=>v.lang==='en-GB')||vs.find(v=>/^en[-_]GB/i.test(v.lang))||vs.find(v=>/^en/i.test(v.lang))||null;
+  }
+  if(hasTTS){pickVoice();synth.onvoiceschanged=pickVoice;}
+  function speak(text,rate,onend){
+    if(!hasTTS)return;
+    const u=new SpeechSynthesisUtterance(text);
+    if(voice)u.voice=voice;
+    u.lang=voice?voice.lang:'en-GB';
+    u.rate=rate||0.85;
+    if(onend)u.onend=onend;
+    synth.speak(u);
+    return u;
+  }
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('.say[data-say]');
+    if(!b)return;
+    synth&&synth.cancel();
+    speak(b.dataset.say,0.8);
+  });
+
+  /* ---------- quiz ---------- */
+  const bank={
+    ed:{opts:['/t/','/d/','/ɪd/'],items:[['worked','/t/'],['played','/d/'],['wanted','/ɪd/'],['watched','/t/'],['needed','/ɪd/'],['stayed','/d/'],['laughed','/t/'],['decided','/ɪd/'],['cleaned','/d/'],['fixed','/t/'],['changed','/d/'],['visited','/ɪd/'],['stopped','/t/'],['travelled','/d/'],['started','/ɪd/'],['relaxed','/t/']],
+        why:{'/ɪd/':'Âm cuối của từ gốc là /t/ hoặc /d/.','/t/':'Âm cuối của từ gốc là âm vô thanh (/p k f s ʃ tʃ/).','/d/':'Âm cuối của từ gốc là âm hữu thanh hoặc nguyên âm.'}},
+    s:{opts:['/s/','/z/','/ɪz/'],items:[['books','/s/'],['dogs','/z/'],['watches','/ɪz/'],['cats','/s/'],['buses','/ɪz/'],['plays','/z/'],['laughs','/s/'],['friends','/z/'],['changes','/ɪz/'],['works','/s/'],['classes','/ɪz/'],['phones','/z/'],['months','/s/'],['wishes','/ɪz/'],['cities','/z/'],['shops','/s/']],
+        why:{'/ɪz/':'Âm cuối của từ gốc là /s z ʃ tʃ ʒ dʒ/.','/s/':'Âm cuối của từ gốc là âm vô thanh (/p t k f θ/).','/z/':'Âm cuối của từ gốc là âm hữu thanh hoặc nguyên âm.'}}
+  };
+  let mode='ed',cur=null,answered=false,right=0,total=0,last=-1;
+  const qw=document.getElementById('qword'),qo=document.getElementById('qopts'),qf=document.getElementById('qfb'),qs=document.getElementById('qscore');
+  function nextQ(){
+    const items=bank[mode].items;let i;
+    do{i=Math.floor(Math.random()*items.length)}while(i===last&&items.length>1);
+    last=i;cur=items[i];answered=false;qw.textContent=cur[0];qf.textContent='';
+    qo.innerHTML='';
+    bank[mode].opts.forEach(o=>{
+      const b=document.createElement('button');b.type='button';b.textContent=o;b.className='ipa';
+      b.addEventListener('click',()=>{
+        if(answered)return;answered=true;total++;
+        if(o===cur[1]){right++;b.classList.add('ok');qf.innerHTML='<b style="color:var(--ok)">Đúng.</b> '+bank[mode].why[cur[1]];}
+        else{b.classList.add('no');[...qo.children].find(x=>x.textContent===cur[1]).classList.add('ok');qf.innerHTML='<b style="color:var(--bad)">Chưa đúng.</b> Đáp án '+cur[1]+'. '+bank[mode].why[cur[1]];}
+        qs.textContent='Đúng '+right+'/'+total;
+      });
+      qo.appendChild(b);
+    });
+  }
+  document.querySelectorAll('#quiz [data-mode]').forEach(b=>b.addEventListener('click',()=>{
+    mode=b.dataset.mode;right=0;total=0;last=-1;qs.textContent='Đúng 0/0';
+    document.querySelectorAll('#quiz [data-mode]').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
+    nextQ();
+  }));
+  document.getElementById('qnext').addEventListener('click',nextQ);
+  document.getElementById('qsay').addEventListener('click',()=>{synth&&synth.cancel();speak(cur[0],0.8)});
+  nextQ();
+
+  /* ---------- recording playback ---------- */
+  const inp=document.getElementById('audioIn'),pl=document.getElementById('player'),rr=document.getElementById('rateRow');
+  let url=null;
+  inp.addEventListener('change',()=>{
+    const f=inp.files&&inp.files[0];if(!f)return;
+    if(url)URL.revokeObjectURL(url);
+    url=URL.createObjectURL(f);pl.src=url;pl.hidden=false;rr.hidden=false;
+  });
+  rr.querySelectorAll('[data-rate]').forEach(b=>b.addEventListener('click',()=>{
+    pl.playbackRate=parseFloat(b.dataset.rate);
+    rr.querySelectorAll('[data-rate]').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
+  }));
+  document.getElementById('back5').addEventListener('click',()=>{pl.currentTime=Math.max(0,pl.currentTime-5)});
+  const cks=[...document.querySelectorAll('#t1 .check input')],ckS=document.getElementById('ckScore');
+  function ckUpdate(){const n=cks.filter(c=>c.checked).length;ckS.textContent='Đã đạt '+n+'/10 tiêu chí.'+(n>=8?' Rất tốt, chuyển sang luyện ngữ điệu.':n>=5?' Tiếp tục sửa các mục chưa đạt.':'');}
+  cks.forEach(c=>c.addEventListener('change',ckUpdate));
+
+  /* ---------- shadowing ---------- */
+  const passages=[
+    {name:'Part 1 · Hometown',text:"I'm from a *small* *city* in the *central* *highlands* / of *Vietnam*. / What I *like* *most* about it / is how *peaceful* it is. / The *streets* aren't *crowded*, / and the *air* is *really* *fresh*. / *Honestly*, / I *think* it's a *great* *place* / to *grow* *up*."},
+    {name:'Part 1 · Free time',text:"In my *free* *time*, / I *usually* *go* for a *walk* / or *listen* to *podcasts*. / It *helps* me *relax* / after a *long* *day* at *school*. / At the *weekends*, / I *sometimes* *meet* my *friends* / for a *coffee* / and we *chat* for *hours*."},
+    {name:'Part 2 · A teacher',text:"I'd *like* to *talk* about my *English* *teacher* / in *high* *school*. / She was *strict*, / but *incredibly* *patient* with us. / What I *remember* *most* / is that she *never* *gave* *up* on *weaker* *students*. / *Thanks* to her, / I *started* to *enjoy* *learning* *languages*, / and that's *why* I *decided* / to *take* the *IELTS* *test*."}
+  ];
+  let pIdx=0;
+  const pt=document.getElementById('passTabs'),pp=document.getElementById('passage');
+  function chunksOf(p){return p.text.split('/').map(s=>s.trim()).filter(Boolean)}
+  function render(){
+    pp.innerHTML='';
+    chunksOf(passages[pIdx]).forEach((c,i,arr)=>{
+      const sp=document.createElement('span');sp.className='c';
+      sp.innerHTML=c.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*([^*]+)\*/g,'<mark class="s">$1</mark>');
+      pp.appendChild(sp);
+      if(i<arr.length-1){const s=document.createElement('span');s.className='sl';s.textContent='/';pp.appendChild(s);pp.appendChild(document.createTextNode(' '))}
+    });
+    [...pt.children].forEach((b,i)=>b.setAttribute('aria-pressed',i===pIdx?'true':'false'));
+  }
+  passages.forEach((p,i)=>{const b=document.createElement('button');b.type='button';b.className='say';b.style.fontSize='.88rem';b.style.padding='6px 12px';b.textContent=p.name;b.addEventListener('click',()=>{stop();pIdx=i;render()});pt.appendChild(b)});
+  const rate=document.getElementById('rate'),rv=document.getElementById('rateVal');
+  rate.addEventListener('input',()=>{rv.textContent=parseFloat(rate.value).toFixed(2)+'×'});
+  let timer=null,run=0;
+  function clearNow(){document.querySelectorAll('.c.now').forEach(x=>x.classList.remove('now'))}
+  function stop(){run++;clearTimeout(timer);synth&&synth.cancel();clearNow()}
+  document.getElementById('stopTts').addEventListener('click',stop);
+  document.getElementById('playAll').addEventListener('click',()=>{
+    stop();speak(chunksOf(passages[pIdx]).map(c=>c.replace(/\*/g,'')).join(', '),parseFloat(rate.value));
+  });
+  document.getElementById('playChunks').addEventListener('click',()=>{
+    stop();const my=run;const cs=chunksOf(passages[pIdx]);const els=[...pp.querySelectorAll('.c')];let i=0;
+    function step(){
+      if(my!==run)return;
+      if(i>=cs.length){clearNow();return}
+      clearNow();els[i].classList.add('now');
+      const txt=cs[i].replace(/\*/g,'');const started=Date.now();
+      speak(txt,parseFloat(rate.value),()=>{
+        if(my!==run)return;
+        const dur=Date.now()-started;i++;
+        timer=setTimeout(step,Math.max(1200,dur*1.2)); /* pause for the student to repeat */
+      });
+    }
+    step();
+  });
+  render();
+
+  /* ---------- vocab ---------- */
+  const V={
+    'Environment':[
+      ['environment','/ɪnˈvaɪrənmənt/','en·VI·ron·ment',4,1,'We should do more to protect the environment.'],
+      ['pollution','/pəˈluːʃn/','pol·LU·tion',3,1,'Air pollution is a serious problem in big cities.'],
+      ['sustainable','/səˈsteɪnəbl/','sus·TAIN·a·ble',4,1,'People are looking for more sustainable ways to live.'],
+      ['renewable','/rɪˈnjuːəbl/','re·NEW·a·ble',4,1,'Renewable energy, like solar power, is getting cheaper.'],
+      ['climate','/ˈklaɪmət/','CLI·mate',2,0,'Climate change affects farmers in my area.'],
+      ['deforestation','/diːˌfɒrɪˈsteɪʃn/','de·for·est·A·tion',5,3,'Deforestation has destroyed many natural habitats.']],
+    'Technology':[
+      ['technology','/tekˈnɒlədʒi/','tech·NOL·o·gy',4,1,'Technology has changed the way we study.'],
+      ['technological','/ˌteknəˈlɒdʒɪkl/','tech·no·LOG·i·cal',5,2,'There have been huge technological advances recently.'],
+      ['device','/dɪˈvaɪs/','de·VICE',2,1,'Most teenagers spend hours on their devices.'],
+      ['artificial','/ˌɑːtɪˈfɪʃl/','ar·ti·FI·cial',4,2,'Artificial intelligence is used in many apps.'],
+      ['addiction','/əˈdɪkʃn/','ad·DIC·tion',3,1,'Phone addiction is common among young people.'],
+      ['communicate','/kəˈmjuːnɪkeɪt/','com·MU·ni·cate',4,1,'I communicate with my family through video calls.']],
+    'Education':[
+      ['education','/ˌedʒuˈkeɪʃn/','ed·u·CA·tion',4,2,'Education is the key to a better future.'],
+      ['academic','/ˌækəˈdemɪk/','ac·a·DEM·ic',4,2,'Academic results are not the only thing that matters.'],
+      ['curriculum','/kəˈrɪkjələm/','cur·RIC·u·lum',4,1,'The school curriculum should include practical skills.'],
+      ['knowledge','/ˈnɒlɪdʒ/','KNOW·ledge',2,0,'Reading widely improves your general knowledge.'],
+      ['university','/ˌjuːnɪˈvɜːsəti/','u·ni·VER·si·ty',5,2,'I hope to study abroad at university.'],
+      ['develop','/dɪˈveləp/','de·VEL·op',3,1,'Group projects help students develop teamwork skills.']],
+    'Work':[
+      ['career','/kəˈrɪə/','ca·REER',2,1,'I want a career in marketing.'],
+      ['colleague','/ˈkɒliːɡ/','COL·league',2,0,'My colleagues are friendly and supportive.'],
+      ['salary','/ˈsæləri/','SAL·a·ry',3,0,'A high salary is not my top priority.'],
+      ['productivity','/ˌprɒdʌkˈtɪvəti/','pro·duc·TIV·i·ty',5,2,'Working from home can increase productivity.'],
+      ['opportunity','/ˌɒpəˈtjuːnəti/','op·por·TU·ni·ty',5,2,'This job gives me the opportunity to travel.'],
+      ['responsibility','/rɪˌspɒnsəˈbɪləti/','re·spon·si·BIL·i·ty',6,3,'Managers have a lot of responsibility.']],
+    'Health':[
+      ['nutrition','/njuˈtrɪʃn/','nu·TRI·tion',3,1,'Good nutrition is important for students.'],
+      ['exercise','/ˈeksəsaɪz/','EX·er·cise',3,0,'I try to exercise at least three times a week.'],
+      ['vegetable','/ˈvedʒtəbl/','VEG·e·ta·ble',3,0,'My mother always makes us eat vegetables.'],
+      ['mental','/ˈmentl/','MEN·tal',2,0,'Mental health is just as important as physical health.'],
+      ['diet','/ˈdaɪət/','DI·et',2,0,'A balanced diet helps you stay focused.'],
+      ['physical','/ˈfɪzɪkl/','PHYS·i·cal',3,0,'Physical activity reduces stress.']]
+  };
+  const tt=document.getElementById('topicTabs'),vb=document.getElementById('vocabBody');
+  const names=Object.keys(V);let vIdx=0;
+  function dots(n,s){let h='<span class="dots" aria-label="trọng âm âm tiết '+(s+1)+'/'+n+'">';for(let i=0;i<n;i++)h+='<i'+(i===s?' class="on"':'')+'></i>';return h+'</span>'}
+  function syl(str){return str.split('·').map(p=>p===p.toUpperCase()&&/[A-Z]/.test(p)?'<b>'+p.toLowerCase()+'</b>':p).join('·')}
+  function vRender(){
+    [...tt.children].forEach((b,i)=>b.setAttribute('aria-pressed',i===vIdx?'true':'false'));
+    vb.innerHTML=V[names[vIdx]].map(r=>'<tr><td><b>'+r[0]+'</b><div class="note syl">'+syl(r[2])+'</div></td><td class="ipa">'+r[1]+'</td><td>'+dots(r[3],r[4])+'</td><td>'+r[5]+'</td><td><button class="say" data-say="'+r[0]+'. '+r[5].replace(/"/g,'')+'">▶</button></td></tr>').join('');
+  }
+
+  /* ---------- Q&A theo chủ đề ---------- */
+  const QA={
+    'Environment':[
+      {part:'Part 1',q:'Do you think your city is environmentally friendly?',use:'pollution, environment',
+       a:"*Not* *really*, / to be *honest*. ↘ / *Air* *pollution* is getting *worse* / because of the *traffic*, / and *people* still use *lots* of *plastic* *bags*. ↘ / But the *local* *government* has *started* / to *plant* more *trees*, / so I *think* it's *slowly* *improving*. ↘",
+       ipa:"ˈnɒt ˈrɪəli / tə bi ˈɒnɪst / ˈeə pəˈluːʃn̩ ɪz ˈɡetɪŋ ˈwɜːs / bɪˈkɒz‿əv ðə ˈtræfɪk / ən ˈpiːpl̩ stɪl juːz ˈlɒts‿əv ˈplæstɪk ˈbæɡz / bət ðə ˈləʊkl̩ ˈɡʌvənmənt həz ˈstɑːtɪd / tə ˈplɑːnt mɔː ˈtriːz / səʊ aɪ ˈθɪŋk‿ɪts ˈsləʊli ɪmˈpruːvɪŋ"},
+      {part:'Part 3',q:'What can individuals do to protect the environment?',use:'environment, renewable, sustainable',
+       a:"I *think* the *easiest* *thing* / is to *change* our *daily* *habits*. ↘ / For *example*, / we can *use* *public* *transport* / *instead* of *driving*, / and *bring* our *own* *bags* to the *market*. ↘ / On a *larger* *scale*, / *people* should *support* *companies* / that use *renewable* *energy* / and *sustainable* *materials*. ↘",
+       ipa:"aɪ ˈθɪŋk ði ˈiːziɪst ˈθɪŋ / ɪz tə ˈtʃeɪndʒ‿aʊə ˈdeɪli ˈhæbɪts / fər‿ɪɡˈzɑːmpl̩ / wi kən ˈjuːz ˈpʌblɪk ˈtrænspɔːt / ɪnˈsted‿əv ˈdraɪvɪŋ / ən ˈbrɪŋ‿aʊər‿ˈəʊn ˈbæɡz tə ðə ˈmɑːkɪt / ɒn‿ə ˈlɑːdʒə ˈskeɪl / ˈpiːpl̩ ʃəd səˈpɔːt ˈkʌmpəniz / ðət juːz rɪˈnjuːəbl̩ ˈenədʒi / ən səˈsteɪnəbl̩ məˈtɪəriəlz"}],
+    'Technology':[
+      {part:'Part 1',q:'How much time do you spend on your phone every day?',use:'device, addiction',
+       a:"*Probably* too *much*, / *around* *five* *hours* a *day*. ↘ / I *use* it to *study*, / *chat* with my *friends*, / and *watch* *videos*. ↘ / I *know* it's *not* *healthy*, / so I've *started* *turning* *off* *notifications* / at *night*. ↘",
+       ipa:"ˈprɒbəbli tuː ˈmʌtʃ / əˈraʊnd ˈfaɪv ˈaʊəz‿ə ˈdeɪ / aɪ ˈjuːz‿ɪt tə ˈstʌdi / ˈtʃæt wɪð maɪ ˈfrendz / ən ˈwɒtʃ ˈvɪdiəʊz / aɪ ˈnəʊ‿ɪts ˈnɒt ˈhelθi / səʊ aɪv ˈstɑːtɪd ˈtɜːnɪŋ‿ˈɒf ˌnəʊtɪfɪˈkeɪʃn̩z / ət ˈnaɪt"},
+      {part:'Part 3',q:'Has technology changed the way people communicate?',use:'technology, communicate',
+       a:"*Definitely*. ↘ / In the *past*, / *people* had to *write* *letters* / or *meet* *face* to *face*. ↘ / *Now* we can *communicate* *instantly* / with *anyone* in the *world*. ↘ / *However*, / I *feel* that *conversations* have become *shorter* / and *less* *personal*, / *especially* among *young* *people*. ↘",
+       ipa:"ˈdefɪnətli / ɪn ðə ˈpɑːst / ˈpiːpl̩ həd tə ˈraɪt ˈletəz / ɔː ˈmiːt ˈfeɪs tə ˈfeɪs / ˈnaʊ wi kən kəˈmjuːnɪkeɪt ˈɪnstəntli / wɪð‿ˈeniwʌn ɪn ðə ˈwɜːld / haʊˈevə / aɪ ˈfiːl ðət ˌkɒnvəˈseɪʃn̩z həv bɪkʌm ˈʃɔːtə / ən ˈles ˈpɜːsənl̩ / ɪˈspeʃəli əmʌŋ ˈjʌŋ ˈpiːpl̩"}],
+    'Education':[
+      {part:'Part 1',q:'Do you enjoy studying English?',use:'develop, knowledge',
+       a:"*Yes*, I *do*. ↘ / At *first* / I *found* it *quite* *difficult*, / *especially* the *pronunciation*. ↘ / But *now* I *really* *enjoy* it, / because I can *watch* *films* / *without* *subtitles* / and *talk* to *people* from *other* *countries*. ↘",
+       ipa:"ˈjes aɪ ˈduː / ət ˈfɜːst / aɪ ˈfaʊnd‿ɪt ˈkwaɪt ˈdɪfɪkəlt / ɪˈspeʃəli ðə prəˌnʌnsiˈeɪʃn̩ / bət ˈnaʊ aɪ ˈrɪəli ɪnˈdʒɔɪ‿ɪt / bɪkəz‿aɪ kən ˈwɒtʃ ˈfɪlmz / wɪˈðaʊt ˈsʌbtaɪtl̩z / ən ˈtɔːk tə ˈpiːpl̩ frəm ˈʌðə ˈkʌntriz"},
+      {part:'Part 3',q:'Should schools teach more practical skills?',use:'curriculum, academic, knowledge, develop',
+       a:"In my *opinion*, / *yes*. ↘ / The *current* *curriculum* *focuses* too *much* / on *academic* *knowledge*. ↘ / *Students* *learn* a *lot* of *theory*, / but they *don't* *know* how to *manage* *money* / or *solve* *real* *problems*. ↘ / *Practical* *skills* would *help* them / *develop* into *independent* *adults*. ↘",
+       ipa:"ɪn maɪ əˈpɪnjən / ˈjes / ðə ˈkʌrənt kəˈrɪkjələm ˈfəʊkəsɪz tuː ˈmʌtʃ / ɒn‿ˌækəˈdemɪk ˈnɒlɪdʒ / ˈstjuːdnts ˈlɜːn‿ə ˈlɒt‿əv ˈθɪəri / bət ðeɪ ˈdəʊnt ˈnəʊ haʊ tə ˈmænɪdʒ ˈmʌni / ɔː ˈsɒlv ˈrɪəl ˈprɒbləmz / ˈpræktɪkl̩ ˈskɪlz wəd ˈhelp‿ðəm / dɪˈveləp‿ɪntə ˌɪndɪˈpendənt ˈædʌlts"}],
+    'Work':[
+      {part:'Part 1',q:'What kind of job would you like to do in the future?',use:'career, opportunity',
+       a:"I'd *love* to *work* in *marketing*. ↘ / I *enjoy* being *creative* / and *working* with *people*, / so I *think* it *suits* my *personality*. ↘ / *Also*, / it's a *career* with a *lot* of *opportunities* / to *travel* and *learn* *new* *things*. ↘",
+       ipa:"aɪd ˈlʌv tə ˈwɜːk‿ɪn ˈmɑːkɪtɪŋ / aɪ ɪnˈdʒɔɪ biːɪŋ kriˈeɪtɪv / ən ˈwɜːkɪŋ wɪð ˈpiːpl̩ / səʊ aɪ ˈθɪŋk‿ɪt ˈsuːts maɪ ˌpɜːsəˈnæləti / ˈɔːlsəʊ / ɪts‿ə kəˈrɪə wɪð‿ə ˈlɒt‿əv ˌɒpəˈtjuːnətiz / tə ˈtrævl̩ ən ˈlɜːn ˈnjuː ˈθɪŋz"},
+      {part:'Part 3',q:'Is a high salary the most important thing in a job?',use:'salary, colleague',
+       a:"*Not* *necessarily*. ↘ / Of *course*, / *money* is *important* / because we *need* it to *live*. ↘ / But if you *hate* your *job*, / a *high* *salary* *won't* make you *happy*. ↘ / I *think* *friendly* *colleagues* / and a *good* *work-life* *balance* / *matter* *just* as *much*. ↘",
+       ipa:"ˈnɒt ˈnesəsərəli / əv ˈkɔːs / ˈmʌni‿ɪz ɪmˈpɔːtnt / bɪkəz wi ˈniːd‿ɪt tə ˈlɪv / bət‿ɪf jə ˈheɪt jə ˈdʒɒb / ə ˈhaɪ ˈsæləri ˈwəʊnt meɪk jə ˈhæpi / aɪ ˈθɪŋk ˈfrendli ˈkɒliːɡz / ənd‿ə ˈɡʊd ˈwɜːk laɪf ˈbæləns / ˈmætə ˈdʒʌst‿əz ˈmʌtʃ"}],
+    'Health':[
+      {part:'Part 1',q:'What do you usually do to stay healthy?',use:'exercise, vegetable, diet',
+       a:"I *try* to *exercise* / at *least* *three* *times* a *week*, / *usually* *jogging* in the *park* / *near* my *house*. ↘ / I *also* *try* to *eat* more *vegetables* / and *less* *fast* *food*, / *although* it's *not* *always* *easy*. ↘",
+       ipa:"aɪ ˈtraɪ tu‿ˈeksəsaɪz / ət ˈliːst ˈθriː ˈtaɪmz‿ə ˈwiːk / ˈjuːʒuəli ˈdʒɒɡɪŋ‿ɪn ðə ˈpɑːk / ˈnɪə maɪ ˈhaʊs / aɪ ˈɔːlsəʊ ˈtraɪ tu‿ˈiːt mɔː ˈvedʒtəbl̩z / ən ˈles ˈfɑːst ˈfuːd / ɔːlˈðəʊ‿ɪts ˈnɒt ˈɔːlweɪz ˈiːzi"},
+      {part:'Part 3',q:'Why do young people today have more mental health problems?',use:'mental, physical',
+       a:"I *think* there are *two* *main* *reasons*. ↘ / *Firstly*, / *students* are under *huge* *pressure* / to get *high* *scores*. ↘ / *Secondly*, / *social* *media* makes them *compare* themselves / with *others* *all* the *time*. ↘ / *Schools* should *pay* more *attention* / to *students'* *mental* *health*, / not *just* their *physical* *health*. ↘",
+       ipa:"aɪ ˈθɪŋk ðər‿ə ˈtuː ˈmeɪn ˈriːzn̩z / ˈfɜːstli / ˈstjuːdnts ər‿ʌndə ˈhjuːdʒ ˈpreʃə / tə ɡet ˈhaɪ ˈskɔːz / ˈsekəndli / ˈsəʊʃl̩ ˈmiːdiə meɪks ðəm kəmˈpeə ðəmselvz / wɪð‿ˈʌðəz ˈɔːl ðə ˈtaɪm / ˈskuːlz ʃəd ˈpeɪ mɔːr‿əˈtenʃn̩ / tə ˈstjuːdnts ˈmentl̩ ˈhelθ / nɒt ˈdʒʌst ðeə ˈfɪzɪkl̩ ˈhelθ"}]
+  };
+  const qaList=document.getElementById('qaList');
+  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  function qaChunks(a){return a.split('/').map(x=>x.trim()).filter(Boolean)}
+  function plain(c){return c.replace(/\*/g,'').replace(/↘/g,'').trim()}
+  function playChunked(els,cs){
+    stop();const my=run;let i=0;
+    function step(){
+      if(my!==run)return;
+      if(i>=cs.length){clearNow();return}
+      clearNow();[].concat(els[i]).forEach(e=>e.classList.add('now'));
+      const started=Date.now();
+      speak(plain(cs[i]),parseFloat(rate.value),()=>{
+        if(my!==run)return;
+        const dur=Date.now()-started;i++;
+        timer=setTimeout(step,Math.max(1200,dur*1.2));
+      });
+    }
+    step();
+  }
+  function ipaHtml(ipa,cs){const ps=ipa.split('/').map(x=>x.trim());return ps.map((x,i)=>{const fall=/↘/.test(cs[i]);return '<span class="c">'+esc(x)+(fall?' <span class="fall">↘</span>':'')+'</span>'+(i<ps.length-1&&!fall?'<span class="sl">/</span> ':' ')}).join('')}
+  function qaRender(){
+    qaList.innerHTML='';
+    (QA[names[vIdx]]||[]).forEach(item=>{
+      const card=document.createElement('article');card.className='qa';
+      const cs=qaChunks(item.a);
+      const ans=cs.map((c,i)=>'<span class="c">'+esc(c).replace(/\*([^*]+)\*/g,'<mark class="s">$1</mark>').replace(/↘/g,'<span class="fall" aria-label="xuống giọng">↘</span>')+'</span>'+(i<cs.length-1&&!/↘\s*$/.test(c)?'<span class="sl">/</span> ':' ')).join('');
+      card.innerHTML='<span class="part">'+item.part+'</span><p class="q">'+esc(item.q)+'</p><p class="ans">'+ans+'</p><div class="ipa-block"><span class="ipa-lbl">IPA</span><p class="ipa ipa-line">'+ipaHtml(item.ipa,cs)+'</p></div><p class="vocab-used">Từ vựng chủ đề trong bài: '+esc(item.use)+'</p><div class="row needs-tts"><button type="button" class="btn ghost b-q">▶ Nghe câu hỏi</button><button type="button" class="btn b-all">▶ Đọc liền</button><button type="button" class="btn ghost b-ch">Đọc theo cụm</button><button type="button" class="btn ghost b-stop">■ Dừng</button></div>';
+      card.querySelector('.b-q').addEventListener('click',()=>{stop();speak(item.q,parseFloat(rate.value))});
+      card.querySelector('.b-all').addEventListener('click',()=>{stop();speak(cs.map(plain).join(', '),parseFloat(rate.value))});
+      card.querySelector('.b-ch').addEventListener('click',()=>{const A=[...card.querySelectorAll('.ans span.c')],B=[...card.querySelectorAll('.ipa-line span.c')];playChunked(A.map((e,i)=>[e,B[i]].filter(Boolean)),cs)});
+      card.querySelector('.b-stop').addEventListener('click',stop);
+      qaList.appendChild(card);
+    });
+  }
+  names.forEach((n,i)=>{const b=document.createElement('button');b.type='button';b.className='say';b.style.fontSize='.88rem';b.style.padding='6px 12px';b.textContent=n;b.addEventListener('click',()=>{stop();vIdx=i;vRender();qaRender()});tt.appendChild(b)});
+  vRender();qaRender();
+  const ipaT=document.getElementById('ipaToggle');
+  ipaT.addEventListener('change',()=>{qaList.classList.toggle('hide-ipa',!ipaT.checked)});
+})();
+</script>
+
+</body>
+</html>
